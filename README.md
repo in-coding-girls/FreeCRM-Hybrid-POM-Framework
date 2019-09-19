@@ -22,4 +22,4 @@
 Make sure you are using the correct browser version.
 You can update to your browser version by putting the driver filee into the root of the project.
 
-##Prerequisites: set up the account at https://classic.crmpro.com/index.html. The populate your config.properties with your account values. Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
+##Prerequisites: set up the account at https://classic.crmpro.com/index.html. Then populate your config.properties with your account values. Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
