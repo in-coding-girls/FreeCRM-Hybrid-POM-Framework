@@ -10,7 +10,7 @@ import com.crm.qa.base.TestBase;
 
 public class ContactsPage extends TestBase {
 
-	@FindBy(xpath = "//td[contains(text(),'Contacts')]")
+	@FindBy(xpath = "//td[@class='datacardtitle' and contains(text(),'Contacts')]")
 	WebElement contactsLabel;
 	
 	@FindBy(id="first_name")
@@ -32,17 +32,14 @@ public class ContactsPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
 	public boolean verifyContactsLabel(){
 		return contactsLabel.isDisplayed();
 	}
-	
 	
 	public void selectContactsByName(String name){
 		driver.findElement(By.xpath("//a[text()='"+name+"']//parent::td[@class='datalistrow']"
 				+ "//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']")).click();
 	}
-	
 	
 	public void createNewContact(String title, String ftName, String ltName, String comp){
 		Select select = new Select(driver.findElement(By.name("title")));
@@ -54,8 +51,5 @@ public class ContactsPage extends TestBase {
 		saveBtn.click();
 		
 	}
-	
-	
-	
 
 }

@@ -1,5 +1,5 @@
 /*
- * @author Naveen Khunteta
+ * @author Yulia Tarima and Tatiana Khen
  * 
  */
 
@@ -29,17 +29,15 @@ public class ContactsPageTest extends TestBase{
 
 	LoginPage loginPage;
 	HomePage homePage;
-	TestUtil testUtil;
 	ContactsPage contactsPage;
+	
+	TestUtil testUtil;
 	
 	String sheetName = "contacts";
 	
-	   
 	public ContactsPageTest(){
 			super();
-			
 	}
-	
 	
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
@@ -50,25 +48,24 @@ public class ContactsPageTest extends TestBase{
 		loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		TestUtil.runTimeInfo("error", "login successful");
-		testUtil.switchToFrame();
+		testUtil.switchToFrame("mainpanel");
 		contactsPage = homePage.clickOnContactsLink();
 	}
 	
 	@Test(priority=1)
 	public void verifyContactsPageLabel(){
-		Assert.assertTrue(contactsPage.verifyContactsLabel(), "contacts label is missing on the page");
+		Assert.assertTrue(contactsPage.verifyContactsLabel(), "Contacts label is missing on the page");
 	}
 	
 	@Test(priority=2)
 	public void selectSingleContactsTest(){
-		contactsPage.selectContactsByName("test2 test2");
+		contactsPage.selectContactsByName("test1 test1");
 	}
 	
 	@Test(priority=3)
 	public void selectMultipleContactsTest(){
 		contactsPage.selectContactsByName("test2 test2");
-		contactsPage.selectContactsByName("ui uiii");
-
+		contactsPage.selectContactsByName("test3 test3");
 	}
 	
 	@DataProvider
@@ -77,23 +74,16 @@ public class ContactsPageTest extends TestBase{
 		return data;
 	}
 	
-	
 	@Test(priority=4, dataProvider="getCRMTestData")
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company){
 		homePage.clickOnNewContactLink();
 		//contactsPage.createNewContact("Mr.", "Tom", "Peter", "Google");
 		contactsPage.createNewContact(title, firstName, lastName, company);
-		
 	}
 	
-	
-
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}
-	
-	
-	
-	
+
 }

@@ -30,37 +30,33 @@ public class HomePageTest extends TestBase {
 	public void setUp() {
 		initialization();
 		testUtil = new TestUtil();
+		testUtil.manyElementsFrameIdentifier = "mainpanel";
 		contactsPage = new ContactsPage();
 		loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
-	
 	@Test(priority=1)
 	public void verifyHomePageTitleTest(){
 		String homePageTitle = homePage.verifyHomePageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO","Home page title not matched");
+		Assert.assertEquals(homePageTitle, "CRMPRO - CRM software for customer relationship management, sales, and support.", "Home Page Title not matched");
 	}
 	
 	@Test(priority=2)
 	public void verifyUserNameTest(){
-		testUtil.switchToFrame();
+		testUtil.switchManyToFrame();
 		Assert.assertTrue(homePage.verifyCorrectUserName());
 	}
 	
 	@Test(priority=3)
 	public void verifyContactsLinkTest(){
-		testUtil.switchToFrame();
+		testUtil.switchManyToFrame();
 		contactsPage = homePage.clickOnContactsLink();
 	}
-	
-	
 	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}
-	
-	
 
 }

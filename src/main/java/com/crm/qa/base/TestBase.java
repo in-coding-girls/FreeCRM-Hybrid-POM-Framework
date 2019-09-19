@@ -38,6 +38,9 @@ public class TestBase {
 	
 	
 	public static void initialization(){
+		
+		String loggedUser = prop.getProperty("loggeduser");
+		
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
