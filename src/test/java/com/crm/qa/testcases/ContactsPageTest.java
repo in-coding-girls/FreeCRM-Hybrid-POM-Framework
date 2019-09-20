@@ -5,19 +5,11 @@
 
 package com.crm.qa.testcases;
 
-import java.io.IOException;
-
-import org.apache.log4j.PropertyConfigurator;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
@@ -44,12 +36,17 @@ public class ContactsPageTest extends TestBase{
 		
 		initialization();
 		testUtil = new TestUtil();
-		contactsPage = new ContactsPage();
+		//TestUtil.runTimeInfo("error", "login successful"); get error displayed for screenshot
+
+				
 		loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		TestUtil.runTimeInfo("error", "login successful");
-		testUtil.switchToFrame("mainpanel");
+		//contactsPage = new ContactsPage();
+		
+		testUtil.manyElementsFrameIdentifier = "mainpanel";
+		testUtil.switchManyToFrame();
 		contactsPage = homePage.clickOnContactsLink();
+		
 	}
 	
 	@Test(priority=1)
@@ -58,7 +55,7 @@ public class ContactsPageTest extends TestBase{
 	}
 	
 	@Test(priority=2)
-	public void selectSingleContactsTest(){
+	public void selectSingleContactTest(){
 		contactsPage.selectContactsByName("test1 test1");
 	}
 	

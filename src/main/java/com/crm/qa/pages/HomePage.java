@@ -14,7 +14,7 @@ public class HomePage extends TestBase {
 	@CacheLookup
 	WebElement userNameLabel;
 
-	@FindBy(xpath = "//a[@title='Contacts' and contains(text(),'Contacts')]")
+	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
 	WebElement contactsLink;
 	
 	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
