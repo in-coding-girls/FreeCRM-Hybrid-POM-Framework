@@ -1,4 +1,4 @@
-#Hybrid Framework with Page Object Model (POM) Pattern using PageFactory API in Selenium in Selenium
+#Hybrid Framework with Page Object Model (POM) Pattern using PageFactory API in Selenium
 
 ##Technologies Used: 
 • Selenium WebDriver 
