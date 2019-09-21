@@ -41,10 +41,9 @@ public class ContactsPageTest extends TestBase{
 				
 		loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		//contactsPage = new ContactsPage();
-		
-		testUtil.manyElementsFrameIdentifier = "mainpanel";
-		testUtil.switchManyToFrame();
+		contactsPage = new ContactsPage();
+
+		testUtil.switchToFrame("mainpanel");
 		contactsPage = homePage.clickOnContactsLink();
 		
 	}

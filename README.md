@@ -22,4 +22,9 @@
 Make sure you are using the correct browser version.
 You can update to your browser version by putting the driver filee into the root of the project.
 
-##Prerequisites: set up the account at https://classic.crmpro.com/index.html. Then populate your config.properties with your account values. Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
+##Running Test Cases
+You can run test cases per each page object separately from each class in src\main\java\com\crm\qa\page or the whole suite through the test runner file located here: src\main\resources\testng.xml file.
+
+##Prerequisites: 
+If config file is not populated
+set up the account at https://classic.crmpro.com/index.html. Then populate your config.properties with your account values. Set up several contacts at the "Contacts page" - these are the values you are using in your ContactsPage.
