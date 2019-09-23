@@ -20,7 +20,7 @@
 
 ##Note
 Make sure you are using the correct browser version.
-You can update to your browser version by putting the driver filee into the root of the project.
+You can update to your browser version by putting the driver file into the drivers folder at the root of the project.
 
 ##Running Test Cases
 You can run test cases per each page object separately from each class in src\main\java\com\crm\qa\page or the whole suite through the test runner file located here: src\main\resources\testng.xml file.
