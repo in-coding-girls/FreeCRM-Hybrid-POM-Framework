@@ -1,4 +1,4 @@
-#Hybrid Framework with Page Object Model (POM) Pattern using PageFactory API in Selenium
+#Hybrid Framework with Data Driven Approach and Page Object Model (POM) Pattern using PageFactory API in Selenium
 
 ##Technologies Used: 
 • Selenium WebDriver 
@@ -19,9 +19,12 @@
 • git and GITHub Repo (Code Versioning Tool)
 
 ##Features
-Webdriver Fire Event/WebEventListener - improved logs and screenshot on failure
-@CacheLookup to improve script performance
-Data Driven approach (xml file reader through TestNG Data Provider)
+• Webdriver Fire Event/WebEventListener - improved console logs and screenshot on failure
+Location: src\main\java\com\crm\qa\util 
+• Extent Report Listener with IReporter Interface (available at TestNG)
+Location: src\main\java\com\qa\ExtentReportListener
+• @CacheLookup implementation improves script performance
+• Data Driven approach (xml file reader through TestNG Data Provider) 
 
 ##Note
 Make sure you are using the correct browser version.
@@ -31,8 +34,9 @@ You can update to your browser version by putting the driver file into the drive
 You can run test cases per each page object separately from each class in src\main\java\com\crm\qa\page or the whole suite through the test runner file located here: src\main\resources\testng.xml file.
 
 ##Checking TestNG Reports
-Right click on the project name and select "Refresh".
-Go to test-output folder -> right click on index.html -> copy file location -> run index.html file in your browser to see the report.
+• Right click on the project name and select "Refresh".
+• Go to test-output folder -> right click on index.html -> copy file location -> run index.html file in your browser to see the report.
+• For Extent Report do the same for ExtentReport.html file 
 
 ##Emailable TestNG Report
 Email this file: emailable-report.html
