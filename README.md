@@ -18,6 +18,11 @@
 • API Jenkins - Continuous Integration Tool 
 • git and GITHub Repo (Code Versioning Tool)
 
+##Features
+Webdriver Fire Event/WebEventListener - improved logs and screenshot on failure
+@CacheLookup to improve script performance
+Data Driven approach (xml file reader through TestNG Data Provider)
+
 ##Note
 Make sure you are using the correct browser version.
 You can update to your browser version by putting the driver file into the drivers folder at the root of the project.
