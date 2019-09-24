@@ -72,7 +72,7 @@ public class TestUtil extends TestBase {
 
 	public static void runTimeInfo(String messageType, String message) throws InterruptedException {
 		js = (JavascriptExecutor) driver;
-		// Check for jQuery on the page, add it if need be
+		// Check for jQuery on the page, add it if needed
 		js.executeScript("if (!window.jQuery) {"
 				+ "var jquery = document.createElement('script'); jquery.type = 'text/javascript';"
 				+ "jquery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js';"
