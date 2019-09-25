@@ -35,8 +35,8 @@ You can run test cases per each page object separately from each class in src\ma
 
 ##Checking TestNG Reports
 • Right click on the project name and select "Refresh".
-• Go to test-output folder -> right click on index.html -> copy file location -> run index.html file in your browser to see the report.
-• For Extent Report do the same for ExtentReport.html file 
+• Go to test-output folder -> right click on index.html -> Properties -> copy file location -> run index.html file in your browser to see the report.
+• To see Extent Report do the same for ExtentReport.html file 
 
 ##Emailable TestNG Report
 Email this file: emailable-report.html
